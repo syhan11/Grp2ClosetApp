@@ -101,7 +101,7 @@ public class Suitcase {
         if (this.shoesItem != null)
             shoes = this.shoesItem.showShoes();
         else
-            shoes = "no shirt";
+            shoes = "no shoes";
 
         String msg = jacket + ", " + shirt + ", " + pants + ", and " + shoes;
 
