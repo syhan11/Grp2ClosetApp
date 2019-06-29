@@ -1,21 +1,19 @@
-import java.lang.reflect.Array;
-import java.util.ArrayList;
 import java.util.Random;
 
-public class Closet {
+public class Suitcase {
     private Jacket jacketItem;
     private Shirt shirtItem;
     private Pants pantsItem;
     private Shoes shoesItem;
 
-    public Closet() {
+    public Suitcase() {
         this.jacketItem = null;
         this.shirtItem = null;
         this.pantsItem = null;
         this.shoesItem = null;
     }
 
-    public Closet(Jacket jacketItem, Shirt shirtItem, Pants pantsItem, Shoes shoesItem) {
+    public Suitcase(Jacket jacketItem, Shirt shirtItem, Pants pantsItem, Shoes shoesItem) {
         this.jacketItem = jacketItem;
         this.shirtItem = shirtItem;
         this.pantsItem = pantsItem;
@@ -54,38 +52,35 @@ public class Closet {
         this.shoesItem = shoesItem;
     }
 
-    public Jacket lookForJacket(String color){
+    public Jacket lookForJacket(String color) {
         String str = this.jacketItem.getColor();
 
         if (color.equalsIgnoreCase(str))
-            return  this.jacketItem;
+            return this.jacketItem;
         else
             return null;
     }
 
-    public Shirt lookForShirt(String color){
+    public Shirt lookForShirt(String color) {
         String str = this.shirtItem.getColor();
 
         if (color.equalsIgnoreCase(str))
-            return  this.shirtItem;
+            return this.shirtItem;
         else
             return null;
     }
 
-    public Pants lookForPants(String color){
+    public Pants lookForPants(String color) {
         String str = this.pantsItem.getColor();
 
         if (color.equalsIgnoreCase(str))
-            return  this.pantsItem;
+            return this.pantsItem;
         else
             return null;
     }
 
 
-/***********
-    public String showCloset() {
-
-
+    public String showSuitcase() {
         String jacket, shirt, pants, shoes;
 
         if (this.jacketItem != null)
@@ -114,6 +109,7 @@ public class Closet {
         return msg;
 
     }
-****/
 
 }
+
+

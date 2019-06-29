@@ -12,27 +12,25 @@ public class ClosetApp {
     public static void main(String[] args) {
 
         // initialize jacket, shirts, pants, & shoes into ArrayList
+        // this is user's closet
         initalizeJackets();
         initalizeShirts();
         initalizePants();
         initalizeShoes();
 
+        Suitcase ansuSuitcase = new Suitcase();
+        Suitcase kellySuitcase = new Suitcase();
+        Suitcase sueSuitcase = new Suitcase();
 
-
-        Closet ansuCloset = new Closet();
-        Closet kellyCloset = new Closet();
-        Closet sueCloset = new Closet();
-
-
-        initalizeCloset(ansuCloset);
-        initalizeCloset(kellyCloset);
-        initalizeCloset(sueCloset);
+        initalizeSuitcase(ansuSuitcase);
+        initalizeSuitcase(kellySuitcase);
+        initalizeSuitcase(sueSuitcase);
 
 
         // print out the content of each closet
-        System.out.println("Ansu Closet has " + ansuCloset.showCloset());
-        System.out.println("Kelly Closet has " + kellyCloset.showCloset());
-        System.out.println("Sue Closet has " + sueCloset.showCloset());
+        System.out.println("Ansu suitcase has " + ansuSuitcase.showSuitcase());
+        System.out.println("Kelly suitcase has " + kellySuitcase.showSuitcase());
+        System.out.println("Sue suitcase has " + sueSuitcase.showSuitcase());
 
 
     }
@@ -59,8 +57,6 @@ public class ClosetApp {
 
     public static void initalizeShirts() {
 
-        //Shirt sitem = new Shirt(String material, String color, boolean casual, boolean shortlength, String type
-
         Shirt item = new Shirt ("linen", "red", true, true, "uTshirt" );
         allShirts.add(item);
 
@@ -75,7 +71,6 @@ public class ClosetApp {
     }
 
     public static void initalizePants() {
-// jean (default) , sweat, dress, casual
         Pants item = new Pants ("linen", "red", true, true, "jean");
         allPants.add(item);
 
@@ -97,30 +92,26 @@ public class ClosetApp {
 
     }
 
-//get all sizes in array list. return a random int-item in that list
 
-
-
-
-    public static void initalizeCloset (Closet tempCloset){
+    public static void initalizeSuitcase (Suitcase tempSuitcase){
         //   ArrayList <Jacket> all_of_jackets = new ArrayList <Jacket>();
         // currently returns one item. add more items later on
         Random rand = new Random();
         int id1 = rand.nextInt(allJackets.size());
         Jacket oneJacket = allJackets.get(id1);
-        tempCloset.setJacketItem(oneJacket);
+        tempSuitcase.setJacketItem(oneJacket);
 
         int id2 = rand.nextInt(allShirts.size());
         Shirt oneShirt = allShirts.get(id2);
-        tempCloset.setShirtItem(oneShirt);
+        tempSuitcase.setShirtItem(oneShirt);
 
         int id3 = rand.nextInt(allPants.size());
         Pants onePants = allPants.get(id3);
-        tempCloset.setPantsItem(onePants);
+        tempSuitcase.setPantsItem(onePants);
 
         int id4 = rand.nextInt(allShoes.size());
         Shoes oneShoe = allShoes.get(id4);
-        tempCloset.setShoesItem(oneShoe);
+        tempSuitcase.setShoesItem(oneShoe);
     }
 
 }
