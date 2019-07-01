@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Scanner;
 
 public class ClosetApp {
 
@@ -33,14 +34,46 @@ public class ClosetApp {
         initalizeSuitcase(kellySuitcase);
         initalizeSuitcase(sueSuitcase);
 
+        // ask user for suitcase choice
 
-        // print out the content of each closet
-        System.out.println("Ansu suitcase has " + ansuSuitcase.showSuitcase());
-        System.out.println("Kelly suitcase has " + kellySuitcase.showSuitcase());
-        System.out.println("Sue suitcase has " + sueSuitcase.showSuitcase());
+        Scanner keyboard = new Scanner(System.in);
+        boolean cont = true;
+        String msg;
+
+        do {
+            System.out.println("There are Ansu's, Kelly's, and Sue's suitcases. Which suitcase would you like to see?");
+            System.out.println("Type \"Ansu\", \"Kelly\", or \"Sue\".");
+            msg = keyboard.nextLine();
+            switch (msg) {
+                case "Ansu":
+                case "ansu":
+                    System.out.println("Ansu suitcase has " + ansuSuitcase.showSuitcase());
+                    break;
+
+                case "Kelly":
+                case "kelly":
+                    System.out.println("Kelly suitcase has " + kellySuitcase.showSuitcase());
+                    break;
+
+                case "Sue":
+                case "sue":
+                    System.out.println("Sue suitcase has " + sueSuitcase.showSuitcase());
+                    break;
+
+                default:
+                    System.out.println("Unknown choice: " + msg);
+                    break;
+            }
+
+            System.out.println("Would you like to continue (Y/N)?");
+            msg = keyboard.nextLine();
+            if (msg.equalsIgnoreCase("n"))
+                cont = false;
+
+        } while (cont);
 
 
-    }
+ }
 
 /*****
     public static void initalizeJackets() {
