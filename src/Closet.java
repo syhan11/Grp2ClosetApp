@@ -88,24 +88,24 @@ public class Closet {
 
     public void initalizeShirts() {
 
-        Shirt item = new Shirt ("linen", "red", true, true, "uTshirt" );
+        Shirt item = new Shirt ("linen", "red", true, true, "u neck" );
         this.addShirt(item);
 
         item = new Shirt ("Denim", "white", true, true, "buttons" );
         this.addShirt(item);
 
-        item = new Shirt ("Fur", "brown", true, true, "collarshirt" );
+        item = new Shirt ("Fur", "brown", true, true, "collart" );
         this.addShirt(item);
 
-        item = new Shirt ("cotton", "brown", true, true, "vTshrit" );
+        item = new Shirt ("cotton", "brown", true, true, "v neck" );
         this.addShirt(item);
     }
 
     public void initalizePants() {
-        Pants item = new Pants ("linen", "red", true, true, "jean");
+        Pants item = new Pants ("cotton", "red", true, true, "jean");
         this.addPants(item);
 
-        item = new Pants ("linen", "red", true, true, "sweat");
+        item = new Pants ("polyester", "red", true, true, "sweat");
         this.addPants(item);
 
         item = new Pants ("linen", "red", true, true, "dress");
@@ -119,6 +119,19 @@ public class Closet {
 
         item = new Shoes ("fur", "red", "sneakers");
         this.addShoes(item);
+
+        item = new Shoes ("denim", "blue", "sandles");
+        this.addShoes(item);
+
+        item = new Shoes ("velvet", "black", "dress");
+        this.addShoes(item);
+
+        item = new Shoes ("velvet", "black", "heels");
+        this.addShoes(item);
+
+
+
+
 
 
     }
